@@ -81,7 +81,8 @@ img {
   border-bottom: 1px solid #050a8f;
   transform: translateX(-100%);
 }
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a:active::after {
   border-bottom: 1px solid #050a8f;
   display: block;
   transform: translateX(0px);
@@ -397,7 +398,8 @@ img {
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
-.product-image:hover::before {
+.product-image:hover::before,
+.product-image:active::before {
   opacity: 1;
 }
 .product-image:hover .buy {
@@ -446,13 +448,15 @@ img {
   background-color: transparent;
   font-weight: 900;
 }
-.blog-details button:hover {
+.blog-details button:hover,
+.blog-details button:active {
   opacity: 1;
 }
 .blog-title {
   font-weight: 800;
 }
-.blog:hover .blog-pic {
+.blog:hover .blog-pic,
+.blog:active .blog-pic {
   color: red;
   height: 100%;
   border-radius: 10px;
