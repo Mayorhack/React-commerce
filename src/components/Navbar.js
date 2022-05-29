@@ -28,17 +28,16 @@ const Navbar = ({ details, click }) => {
     }
   }
   const toggleNav = function (e) {
-    const nav = document.querySelector(".primary-nav");
     const nav2 = document.querySelector(".nav");
-    if (nav.dataset.visible === "false") {
+    if (nav2.dataset.visible === "false") {
       e.target.classList.remove("fa-bars");
       e.target.classList.add("fa-xmark");
-      nav.dataset.visible = "true";
+
       nav2.dataset.visible = "true";
     } else {
       e.target.classList.add("fa-bars");
       e.target.classList.remove("fa-xmark");
-      nav.dataset.visible = "false";
+
       nav2.dataset.visible = "false";
     }
   };

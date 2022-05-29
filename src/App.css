@@ -313,6 +313,11 @@ img {
   transition: 1s ease-out;
   cursor: pointer;
 }
+.price {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #eebc1d;
+}
 .stat {
   position: absolute;
   top: 20px;
@@ -657,8 +662,8 @@ img {
     padding: min(30vh, 10rem) 20px;
     align-items: flex-start;
     justify-content: flex-start;
-    transform: translateX(-100%);
-    transition: 1000ms ease-in;
+
+    transition: 100ms ease-in;
     height: 100%;
     z-index: 10000;
   }
@@ -668,9 +673,7 @@ img {
   .nav[data-visible="true"] {
     display: block;
   }
-  .primary-nav[data-visible="true"] {
-    transform: translateX(0);
-  }
+
   .logo {
     z-index: -100;
     position: relative;

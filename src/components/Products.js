@@ -30,7 +30,7 @@ const Product = ({ name, price, status, url, click }) => {
       <div className="product-info">
         <p>{name}</p>
         <p className="description">Lorem ipsum dolor sit amet,</p>
-        <p>$ {price}</p>
+        <p className="price">$ {price}</p>
       </div>
     </div>
   );
