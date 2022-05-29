@@ -10,7 +10,9 @@ const Navbar = ({ details, click }) => {
         <img src={item.url} alt="" />
         <p>{item.name}</p>
         <p>{`$ ${item.price}`}</p>
-        <button className="btn-delete" onClick={() => click(item.id)}></button>
+        <button className="btn-delete" onClick={() => click(item.id)}>
+          x
+        </button>
       </li>
     );
   });
@@ -27,20 +29,23 @@ const Navbar = ({ details, click }) => {
   }
   const toggleNav = function (e) {
     const nav = document.querySelector(".primary-nav");
+    const nav2 = document.querySelector(".nav");
     if (nav.dataset.visible === "false") {
       e.target.classList.remove("fa-bars");
       e.target.classList.add("fa-xmark");
       nav.dataset.visible = "true";
+      nav2.dataset.visible = "true";
     } else {
       e.target.classList.add("fa-bars");
       e.target.classList.remove("fa-xmark");
       nav.dataset.visible = "false";
+      nav2.dataset.visible = "false";
     }
   };
 
   return (
     <div className="main_nav">
-      <div className="nav">
+      <div className="nav" data-visible="false">
         <div className="flex container primary-nav" data-visible="false">
           <ul className="flex">
             <li>

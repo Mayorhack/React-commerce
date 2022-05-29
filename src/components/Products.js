@@ -29,9 +29,7 @@ const Product = ({ name, price, status, url, click }) => {
       </div>
       <div className="product-info">
         <p>{name}</p>
-        <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eveniet!
-        </p>
+        <p className="description">Lorem ipsum dolor sit amet,</p>
         <p>$ {price}</p>
       </div>
     </div>
