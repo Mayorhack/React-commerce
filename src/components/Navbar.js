@@ -32,7 +32,6 @@ const Navbar = ({ details, click }) => {
     if (nav2.dataset.visible === "false") {
       e.target.classList.remove("fa-bars");
       e.target.classList.add("fa-xmark");
-
       nav2.dataset.visible = "true";
     } else {
       e.target.classList.add("fa-bars");
@@ -78,7 +77,7 @@ const Navbar = ({ details, click }) => {
             <p>No of items</p>
             <p>{details.length}</p>
             <p>Delivery Fee</p>
-            <p>${0.1 * total}</p>
+            <p>${Math.trunc(0.1 * total)}</p>
             <p>
               <em>Total Cost</em>{" "}
             </p>
@@ -98,10 +97,11 @@ const Navbar = ({ details, click }) => {
         <h3>SNEAKERS</h3>
       </div>
       {/* shooping cart */}
-      <button
-        className="fa-solid fa-cart-shopping cart"
-        onClick={handleClick}
-      ></button>
+
+      <button className="fa-solid fa-cart-shopping cart" onClick={handleClick}>
+        <p className="cart-number">{details.length ? details.length : ""}</p>
+      </button>
+
       {/* overlay */}
       <div className="overlay hidden"></div>
     </div>

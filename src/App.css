@@ -88,6 +88,14 @@ img {
   transform: translateX(0px);
   opacity: 1;
 }
+.cart-number {
+  position: absolute;
+  font-size: 8px;
+  font-weight: 900;
+  top: 0;
+  right: -8px;
+  color: red;
+}
 /* Cart summary */
 .btn-close {
   position: absolute;
@@ -163,6 +171,7 @@ img {
   font-size: 20px;
   background-color: transparent;
   cursor: pointer;
+  bottom: 12px;
 }
 .cart:hover .hidden {
   display: block;
@@ -689,7 +698,6 @@ img {
   }
   .main_nav .cart {
     padding: 5px;
-
     right: 3%;
   }
   .account {
